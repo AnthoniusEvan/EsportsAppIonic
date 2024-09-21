@@ -1,0 +1,7 @@
+{
+  "name": "esportsapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

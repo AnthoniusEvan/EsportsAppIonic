@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>  
+    </ion-buttons>
+
+    <ion-icon name="person-circle-outline" slot="end" size="large" style="margin-right: 20px"></ion-icon>
+    <ion-title>E-SPORTS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>  
+      </ion-buttons>
+      <ion-title size="large">E-SPORTS</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <a routerLink="/home/games" draggable="false">
+      <div class="img-container">
+        <ion-img src="../../assets/games_background.png" alt="Games Background" draggable="false"></ion-img>
+        <div class="centered-text">
+          <ion-icon name="game-controller-outline" size="large" color="danger"></ion-icon>
+          <br>GAMES WE PLAY
+        </div>
+      </div>
+    </a>
+
+    <a routerLink="/home/whoweare" draggable="false">
+      <div class="img-container">
+        <ion-img src="../../assets/whoweare_bg.png" alt="Teams Background" draggable="false"></ion-img>
+        <div class="centered-text">
+          <ion-icon name="people-outline" size="large" color="danger"></ion-icon>
+          <br>WHO WE ARE
+        </div>
+      </div>
+    </a>
+
+    <a routerLink="/home/schedule" draggable="false">
+      <div class="img-container">
+        <ion-img src="../../assets/ourschedule_bg.png" alt="Schedule Background" draggable="false"></ion-img>
+        <div class="centered-text">
+          <ion-icon name="calendar-outline" size="large" color="danger"></ion-icon>
+          <br>OUR SCHEDULE
+        </div>
+      </div>
+    </a>
+    
+  </div>
+</ion-content>
