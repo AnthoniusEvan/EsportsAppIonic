@@ -7,6 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchedulePage implements OnInit {
 
+  schedule = [
+    {
+      date: '20 SEP',
+      event: 'Regional Qualifier - Valorant',
+      team: 'Void Runners',
+      image: 'assets/valorant.jpg'
+    },
+    {
+      date: '20 SEP',
+      event: 'Regional Qualifier - Valorant',
+      team: 'Void Runners',
+      image: 'assets/valorant.jpg'
+    },
+    {
+      date: '20 SEP',
+      event: 'Regional Qualifier - Valorant',
+      team: 'Void Runners',
+      image: 'assets/valorant.jpg'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

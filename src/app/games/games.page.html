@@ -3,9 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>  
     </ion-buttons>
-
     <ion-icon name="person-circle-outline" slot="end" size="large" style="margin-right: 20px"></ion-icon>
-  
     <ion-title>E-SPORTS</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,8 +14,26 @@
       <ion-buttons slot="start">
         <ion-back-button></ion-back-button>
       </ion-buttons>
-    
       <ion-title size="large">E-SPORTS</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card *ngFor="let game of games" class="game-card">
+    <img [src]="game.image" class="game-image" />
+    <ion-card-header>
+      <ion-card-title>{{ game.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ game.description }}
+    </ion-card-content>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button color="light" fill="clear" class="achievement-button">ACHIEVEMENT</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button color="danger" fill="clear" class="teams-button">TEAMS</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
 </ion-content>

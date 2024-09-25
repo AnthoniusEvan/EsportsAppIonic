@@ -1,0 +1,50 @@
+.game-card {
+    margin: 20px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+  
+    ion-card-title {
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  
+    ion-card-content {
+      text-align: left;
+      color: #E8E8E8;
+      font-size: 12px;
+    }
+  
+    ion-row {
+      padding: 8px 2px;
+      display: flex; 
+      justify-content: flex-end; 
+    }
+  }
+  
+  .game-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .achievement-button {
+    background: #e2000f;
+    border-radius: 10px; 
+    --color: #ffffff;
+    font-weight: bold;
+    width: auto;
+    font-size: 11px;
+    display: flex;
+  }
+  
+  .teams-button {
+    --background: #111827;
+    border: 1px solid #e2000f;
+    border-radius: 10px;
+    --color: #ffffff;
+    font-weight: bold;
+    width: auto;
+    font-size: 11px;
+    display: flex;
+  }
+  
