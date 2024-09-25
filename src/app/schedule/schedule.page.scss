@@ -1,11 +1,14 @@
 .schedule-card {
     border-radius: 14px;
+    margin:0;
     margin-bottom: 16px;
     background-color: #991B1B;
     color: #fff;
     display: flex;
     align-items: center;
     padding: 10px;
+    height:100px;
+    
   }
   
   .schedule-img {
@@ -13,9 +16,12 @@
     height: 75px;
     border-radius: 9px;
     object-fit: cover;
-    margin-right: 10px;
   }
   
+  ion-card-header, ion-card-content{
+    padding:0;
+    padding-left:10px;
+  }
   ion-card-title {
     font-size: 20px;
     color: #fff;
@@ -25,6 +31,7 @@
   ion-card-subtitle {
     font-size: 14px;
     color: #f1f1f1;
+    font-weight: 300;
   }
   
   .schedule-card ion-card-content {
