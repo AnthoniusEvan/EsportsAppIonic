@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'teams',
     loadChildren: () => import('../teams/teams.module').then( m => m.TeamsPageModule)
-  }
+  },
+  {
+    path: 'achievement/:index',
+    loadChildren: () => import('./achievement/achievement.module').then( m => m.AchievementPageModule)
+  },
 ];
 
 @NgModule({

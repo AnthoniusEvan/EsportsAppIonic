@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>  
+    </ion-buttons>
+
+    <ion-icon name="person-circle-outline" slot="end" size="large" style="margin-right: 20px"></ion-icon>
+    <ion-title>Achievements</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>  
+      </ion-buttons>
+  
+      <ion-icon name="person-circle-outline" slot="end" size="large" style="margin-right: 20px"></ion-icon>
+      <ion-title>Achievements</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-img [src]="getImg()" alt="Background" draggable="false"></ion-img>
+
+    <ion-select [(ngModel)]="selected_year" label="Select year" labelPlacement="floating" interface="popover">
+      <ion-select-option value="all">All</ion-select-option>
+      <ion-select-option *ngFor="let year of years"     
+             [value]="year">{{year}}</ion-select-option>
+    </ion-select>
+
+    <ion-text>
+      <h4>{{ game.title }}</h4>
+    </ion-text>
+
+    <ion-text>
+      <ol>
+        <li *ngFor="let feat of getFeats()">{{feat}}</li>
+      </ol>
+      
+    </ion-text>
+
+  </div>
+</ion-content>

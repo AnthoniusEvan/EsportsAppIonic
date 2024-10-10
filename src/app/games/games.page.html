@@ -18,17 +18,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card *ngFor="let game of games" class="game-card">
+  <ion-card *ngFor="let game of games; let i = index" class="game-card">
     <img [src]="game.image" class="game-image" />
     <ion-card-header>
       <ion-card-title>{{ game.title }}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content class="ion-text-justify">
       {{ game.description }}
     </ion-card-content>
     <ion-row>
       <ion-col size="6">
-        <ion-button color="light" fill="clear" class="achievement-button">ACHIEVEMENT</ion-button>
+        <a routerLink="./achievement/{{i}}">
+        <ion-button color="light" fill="clear" class="achievement-button" >ACHIEVEMENT</ion-button></a>
       </ion-col>
       <ion-col size="4">
         <ion-button color="danger" fill="clear" class="teams-button">TEAMS</ion-button>
