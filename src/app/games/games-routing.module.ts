@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'teams/:index',
-    loadChildren: () => import('../teams/teams.module').then( m => m.TeamsPageModule)
+    loadChildren: () => import('./teams/teams.module').then( m => m.TeamsPageModule)
   },
   {
     path: 'achievement/:index',

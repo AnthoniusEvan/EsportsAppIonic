@@ -11,13 +11,14 @@ export class TeamsPage implements OnInit {
 
   index=0
   game:any
-
+  teams:any[]=[]
   constructor(private route: ActivatedRoute, private appservice:AppserviceService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params =>{
       this.index=params['index']
       this.game = this.appservice.games[this.index]
+      this.teams = Object.keys(this.appservice.teams[this.index].teams)
     })
   }
 

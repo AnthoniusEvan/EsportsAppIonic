@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'teams',
-    loadChildren: () => import('./teams/teams.module').then( m => m.TeamsPageModule)
-  },
-  {
     path: 'schedule',
     loadChildren: () => import('./schedule/schedule.module').then( m => m.SchedulePageModule)
   },

@@ -6,6 +6,7 @@
     padding-top: 30px;
     padding-right: 7%;
     padding-left: 7%;
+    padding-bottom: 30px;
 }
 
 ion-img{
@@ -17,7 +18,24 @@ h4{
     font-weight: 600;
     font-style: italic;
 }
-ol{
-    font-size: 16px;
-    padding-left: 20px;
+
+.teams-button {
+    --background: #111827;
+    border: 1px solid #e2000f;
+    border-radius: 10px;
+    --color: #ffffff;
+    font-weight: bold;
+    width: auto;
+    font-size: 11px;
+    display: flex;
+  }
+
+
+ion-button{
+    margin-top: 20px;
+    --color: white;
+    font-style: italic;
+    letter-spacing: 3px;
+    --border-color: red;
+    --background-activated: red;
 }

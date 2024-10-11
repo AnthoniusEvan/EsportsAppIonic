@@ -23,9 +23,7 @@
 
   <div id="container">
     <ion-img [src]="getImg()" alt="Background" draggable="false"></ion-img>
-  </div>
 
-  <ion-text>
-    <h4>{{ game.title }}</h4>
-  </ion-text>
+    <ion-button fill="outline" expand="block" [routerLink]="['/']" *ngFor="let team of teams">{{team}}</ion-button>
+  </div>
 </ion-content>
