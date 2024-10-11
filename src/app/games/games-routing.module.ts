@@ -9,7 +9,7 @@ const routes: Routes = [
     component: GamesPage
   },
   {
-    path: 'teams',
+    path: 'teams/:index',
     loadChildren: () => import('../teams/teams.module').then( m => m.TeamsPageModule)
   },
   {
