@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: TeamsPage
+  },
+  {
+    path: 'team-details/:index',
+    loadChildren: () => import('./team-details/team-details.module').then( m => m.TeamDetailsPageModule)
   }
+
 ];
 
 @NgModule({

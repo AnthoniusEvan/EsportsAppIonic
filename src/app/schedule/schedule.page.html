@@ -9,7 +9,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-card *ngFor="let item of schedule" class="schedule-card">
+  <ion-card *ngFor="let item of schedule" class="schedule-card" (click)="goToDetails(item)">
     <img [src]="item.image" class="schedule-img">
     <div class="schedule-info">
       <ion-card-header>
@@ -20,5 +20,5 @@
         Played by {{item.team}}
       </ion-card-content>
     </div>
-  </ion-card>
+  </ion-card>  
 </ion-content>

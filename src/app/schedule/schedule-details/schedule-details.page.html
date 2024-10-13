@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ event }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="game-card">
+    <img [src]="image" alt="Esports Event" class="game-image" />
+
+    <ion-card-header>
+      <ion-card-title class="game-title">{{ event }}</ion-card-title>
+      <p class="location-time">{{ date }}</p>
+      <p class="team-name">{{ team }}</p>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="game-description">
+        This high-stakes event will bring together top teams from across the region, all competing for a chance to advance to the national finals. Expect intense gameplay, strategic plays, and thrilling moments as teams battle it out in one of the most popular first-person shooters.
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
