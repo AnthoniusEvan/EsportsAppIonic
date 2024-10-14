@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';  // Import Router
+import { ScheduleService } from '../schedule.service';
 
 @Component({
   selector: 'app-schedule',
@@ -8,40 +9,13 @@ import { Router } from '@angular/router';  // Import Router
 })
 export class SchedulePage implements OnInit {
 
-  schedule = [
-    {
-      date: '20 SEP',
-      event: 'Regional Qualifier - Valorant',
-      team: 'Void Runners',
-      image: 'assets/valorant.jpg'
-    },
-    {
-      date: '21 SEP',
-      event: 'Regional Qualifier - PUBG',
-      team: 'Night Stalkers',
-      image: 'assets/pubg.jpg'
-    },
-    {
-      date: '22 SEP',
-      event: 'Regional Qualifier - CS:GO',
-      team: 'Sharpshooters',
-      image: 'assets/csgo.jpeg'
-    }
-  ];
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router, private scheduleService:ScheduleService) { }
+  
+  scheduless:any[]= []
   ngOnInit() {
+    this.scheduless=this.scheduleService.scheduless;
   }
 
-  goToDetails(item: { date: any; event: any; team: any; image: any; }) {
-    this.router.navigate(['/schedule-details'], {
-      queryParams: {
-        date: item.date,
-        event: item.event,
-        team: item.team,
-        image: item.image
-      }
-    });
-  }
+  
 }

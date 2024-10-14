@@ -19,6 +19,11 @@ const routes: Routes = [
     path: 'games',
     loadChildren: () => import('./games/games.module').then( m => m.GamesPageModule)
   },
+  {
+    path: 'team-details/:index/:teamIndex',
+    loadChildren: () => import('./games/team-details/team-details.module').then( m => m.TeamDetailsPageModule)
+  },
+
 
 ];
 

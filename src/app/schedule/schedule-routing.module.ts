@@ -9,7 +9,7 @@ const routes: Routes = [
     component: SchedulePage
   },
   {
-    path: 'schedule-details',
+    path: 'schedule-details/:index',
     loadChildren: () => import('./schedule-details/schedule-details.module').then(m => m.ScheduleDetailsPageModule)
   }
 ];

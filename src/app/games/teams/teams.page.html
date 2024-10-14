@@ -24,6 +24,6 @@
   <div id="container">
     <ion-img [src]="getImg()" alt="Background" draggable="false"></ion-img>
 
-    <ion-button fill="outline" expand="block" [routerLink]="['/games/teams/team-details/{{i}}']" *ngFor="let team of teams; let i = index">{{team}}</ion-button>
+    <ion-button fill="outline" expand="block" (click) = "goToTeamMember(teamIndex)" *ngFor="let team of teams; let teamIndex = index">{{team}}</ion-button>
   </div>
 </ion-content>

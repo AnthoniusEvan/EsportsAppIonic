@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>TEAM MEMBERS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="team-banner">
+    <ion-img [src]="'../../assets/' + game.toLowerCase() + '.jpg'" class="banner-img"></ion-img>
+  </div>
+  
+  <div class="team-info">
+    <ion-button color="dark" shape="round" fill="solid" expand="block" class="team-button">
+      <img src="../../assets/icon (1).png" class="custom-icon" alt="icon">
+      {{teamName}}
+    </ion-button>
+  </div>
+  <div *ngFor="let player of selectedTeam">
+    <div class="player-details">
+      <div class="player-img">
+        <ion-avatar>
+          <img src="../../assets/icon (1).png" alt="Player Image" />
+        </ion-avatar>
+      </div>
+      <div class="player-info">
+        <h2>{{player.name}}</h2>
+        <p>Role: {{player.role}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

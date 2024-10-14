@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ScheduleService } from 'src/app/schedule.service';
+import { ToastController } from '@ionic/angular'; // Import ToastController
 
 @Component({
   selector: 'app-schedule-details',
@@ -7,19 +9,29 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./schedule-details.page.scss'],
 })
 export class ScheduleDetailsPage implements OnInit {
-  date = "";
-  event= "";
-  team= "";
-  image= "";
+  index= 0;
+  scheduless:any[] = [];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private scheduleService: ScheduleService, 
+    private toastController: ToastController
+  ) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.date = params['date'];
-      this.event = params['event'];
-      this.team = params['team'];
-      this.image = params['image'];
+    this.scheduless = this.scheduleService.scheduless;
+    this.route.params.subscribe(params => {
+      this.index = params['index'];
     });
+  }
+
+  async presentToast() { 
+    const toast = await this.toastController.create({
+      message: 'You will be notified about this event.',
+      duration: 2000,
+      color: 'medium', 
+      position: 'bottom',
+    });
+    toast.present();
   }
 }

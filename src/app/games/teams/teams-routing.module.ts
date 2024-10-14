@@ -9,9 +9,9 @@ const routes: Routes = [
     component: TeamsPage
   },
   {
-    path: 'team-details/:index',
-    loadChildren: () => import('./team-details/team-details.module').then( m => m.TeamDetailsPageModule)
-  }
+    path: 'team-details',
+    loadChildren: () => import('../team-details/team-details.module').then( m => m.TeamDetailsPageModule)
+  },
 
 ];
 

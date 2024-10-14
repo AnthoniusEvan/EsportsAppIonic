@@ -9,8 +9,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-card *ngFor="let item of schedule" class="schedule-card" (click)="goToDetails(item)">
-    <img [src]="item.image" class="schedule-img">
+  <ion-card *ngFor="let item of scheduless ; let i  = index" class="schedule-card" routerLink="./schedule-details/{{i}}"  >
+    <img src="../../assets/{{item.image}}" class="schedule-img">
     <div class="schedule-info">
       <ion-card-header>
         <ion-card-title>{{item.date}}</ion-card-title>

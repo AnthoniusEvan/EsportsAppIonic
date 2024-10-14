@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { AppserviceService } from 'src/app/appservice.service';
 
 @Component({
@@ -8,11 +9,10 @@ import { AppserviceService } from 'src/app/appservice.service';
   styleUrls: ['./teams.page.scss'],
 })
 export class TeamsPage implements OnInit {
-
   index=0
   game:any
   teams:any[]=[]
-  constructor(private route: ActivatedRoute, private appservice:AppserviceService) { }
+  constructor(private route: ActivatedRoute, private appservice:AppserviceService, private navCtrl:NavController) { }
 
   ngOnInit() {
     this.route.params.subscribe(params =>{
@@ -21,7 +21,9 @@ export class TeamsPage implements OnInit {
       this.teams = Object.keys(this.appservice.teams[this.index].teams)
     })
   }
-
+  goToTeamMember(teamIndex: number){
+    this.navCtrl.navigateForward(`/team-details/${this.index}/${teamIndex}`);
+  }
   getImg(): String{
     return "../../"+this.game.image
   }
