@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ScheduleService } from 'src/app/schedule.service';
-import { ToastController } from '@ionic/angular'; // Import ToastController
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-schedule-details',
